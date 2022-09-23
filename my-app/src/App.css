@@ -28,6 +28,45 @@
   color: #61dafb;
 }
 
+.PageHeaderText {
+  font-family: "Baloo Thambi 2", cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 50px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #a0c5e8;
+  margin-bottom: 15px;
+}
+
+.Logo-Text {
+  width: 300px;
+  height: 58px;
+  font-family: "Chilanka";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 44px;
+  letter-spacing: -0.015em;
+
+  color: #a0c5e8;
+}
+.Logo-subText {
+  width: 350px;
+  height: 68px;
+  font-family: Garamond, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 14px;
+  letter-spacing: -0.015em;
+
+  color: #a0c5e8;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
