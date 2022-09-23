@@ -8,7 +8,16 @@ import "../App";
 export const Browse = () => {
   return (
     <div>
-      <NavBar></NavBar>
+        <h1 className=".PageHeaderText">Browse Items</h1>
+    {/* feed should generate here */}
+
+    <VStack spacing = {500}>
+        <
+          <VStack spacing={200}>
+          </VStack>
+          <NavBar></NavBar>
+        </VStack>
+      
     </div>
   );
 };

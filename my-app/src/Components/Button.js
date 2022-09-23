@@ -2,7 +2,7 @@ import React from "react";
 import { Box } from "@chakra-ui/react";
 import "../App.css";
 
-const Button = (props) => {
+export const Button = (props) => {
   return (
     <div>
       <Box
