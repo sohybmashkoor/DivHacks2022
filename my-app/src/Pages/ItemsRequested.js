@@ -8,6 +8,7 @@ import "../App";
 export const ItemsRequested = () => {
   return (
     <div>
+      <h1 className=".PageHeaderText"> Items Requested </h1>
       <NavBar></NavBar>
     </div>
   );

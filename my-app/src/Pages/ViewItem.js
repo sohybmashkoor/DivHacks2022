@@ -11,8 +11,8 @@ export const EditMyItem = () => {
     <div>
     <h1 className=".PageHeaderText">edit item</h1>
       {/* <NavBar></NavBar> */}
-      <Button text=""></Button>
-      <Button></Button>
+      <Button text="Request Item"></Button>
+      <Button text="Cancel"></Button>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "@chakra-ui/react": "^2.3.4"
+    "@chakra-ui/react": "^2.3.4",
+    "firebase": "^9.10.0"
   }
 }

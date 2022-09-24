@@ -9,9 +9,15 @@ import "../App";
 export const MyItems = () => {
   return (
     <div>
-    <h1>my items</h1>
-    <Button text="Add Item"></Button>
-      <NavBar></NavBar>
+    <h1>My items</h1>
+    <VStack spacing = {300}>
+          <VStack spacing={10}>
+
+            <Button text="Add Item"></Button>
+          </VStack>
+          <NavBar></NavBar>
+     </VStack>
+    
     </div>
   );
 };

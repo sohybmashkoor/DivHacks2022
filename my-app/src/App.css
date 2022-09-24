@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -84,6 +85,20 @@
   text-transform: uppercase;
   color: #ffffff;
 }
+
+.ProfileImage{
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+.NaviBar{
+  position: fixed;
+  margin-bottom: 30px;
+  bottom: 0;
+
+}
+ 
 
 @keyframes App-logo-spin {
   from {
