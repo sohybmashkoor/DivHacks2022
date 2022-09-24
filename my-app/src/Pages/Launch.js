@@ -4,6 +4,7 @@ import { VStack } from "@chakra-ui/react";
 import { NavBar } from "../Components/NavBar";
 import { Button } from "../Components/Button";
 import { getAllItems2, databases } from "../services/appwriteConfig";
+import ecycle from "../Images/ecycle.png";
 import "../App";
 import { useState, useEffect } from "react";
 
@@ -18,7 +19,7 @@ const Launch = () => {
     <div>
       <VStack spacing={35}>
         <VStack>
-          <br/>
+          <br />
           <header className="Logo-Text"> eCycle </header>
           <p className="Logo-subText"> Your Virtual Junkyard! </p>
         </VStack>
@@ -26,6 +27,12 @@ const Launch = () => {
 
       <VStack spacing={300}>
         <VStack spacing={10}>
+          <img
+            alt="Profile image"
+            class="profile image"
+            src={ecycle}
+            className="LogoImage"
+          ></img>
           <Link to="/Browse">
             <Button text="Sign In" />
           </Link>

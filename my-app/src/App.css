@@ -89,6 +89,10 @@
   color: #a2d9a3;
 }
 
+.LogoImage {
+  scale: .75;
+}
+
 .Button {
   width: 120px;
   height: 58px;
