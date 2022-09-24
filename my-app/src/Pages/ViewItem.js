@@ -5,17 +5,21 @@ import { VStack } from "@chakra-ui/react";
 import { Button } from "../Components/Button";
 import "../App";
 
-export const ViewItem = (props) => {
+export const ViewItem = () => {
+  let imageUrl = localStorage.getItem("imageUrl");
   return (
     <div>
       <h1 className=".PageHeaderText"> VIEW ITEM</h1>
       <VStack spacing={10}>
-      <Link to="/Browse">
-        <Button text="Request Item"></Button>
+       
+        <img alt="item image" className= "TilePhoto" src={imageUrl} key=""/>
+t
+        <Link to="/Browse">
+          <Button text="Request Item"></Button>
         </Link>
         <Link to="/Browse">
-       <Button text="Cancel"></Button>
-       </Link>
+          <Button text="Cancel"></Button>
+        </Link>
       </VStack>
     </div>
   );
