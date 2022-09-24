@@ -8,49 +8,35 @@ import "../App";
 
 export const MyItems = () => {
   let obj1 = {
-    itemName: "iPhone 5",
-    itemDescription: "Doesn't turn on. Some exterior damage.",
+    itemName: "Cassette Recorder",
+    itemDescription: "Well used, from 1998",
     itemUser: "",
-    itemImage: "https://i.ebayimg.com/images/g/6vcAAOSwqOJiWbmP/s-l500.jpg",
+    itemImage: "https://i.ebayimg.com/images/g/QUkAAOSwNLVhuik-/s-l400.jpg",
   };
 let obj2 = {
-  itemName: "2007 Dell Computer",
-  itemDescription: "Water damage",
+  itemName: "Chrysler Solid State Radio",
+  itemDescription: "Unused",
   itemUser: "",
   itemImage:
-    "https://i.ebayimg.com/thumbs/images/g/DhoAAOSwPjBjLi65/s-l225.webp",
+    "https://i.ebayimg.com/images/g/j-QAAOSw08dgGuiz/s-l400.jpg",
 };
 let obj3 = {
-  itemName: "RAM Memory Chips",
-  itemDescription: "About 100 chips, unsure if they work",
+  itemName: "Radio Telephone",
+  itemDescription: "Cord is broken",
   itemUser: "",
   itemImage:
-    "https://i.ebayimg.com/thumbs/images/g/C5oAAOSwT9ZjHimG/s-l225.webp",
-};
-let obj4 = {
-  itemName: 'Sharp 13" TV',
-  itemDescription: "Works perfectly, just old.",
-  itemUser: "",
-  itemImage:
-    "https://i.ebayimg.com/thumbs/images/g/RrwAAOSwP0piqy2a/s-l225.webp",
-};
-let obj5 = {
-itemName: "Car Stereo",
-  itemDescription: "No clue if it works. Trying to get rid of it.",
-  itemUser: "",
-  itemImage:
-    "https://i.ebayimg.com/thumbs/images/g/OV4AAOSwMexiMmb5/s-l225.webp",
+    "https://i.ebayimg.com/thumbs/images/g/6YQAAOSwT3ZiVISR/s-l300.webp",
 };
 
+
 let feed1 = [obj1, obj2];
-let feed2 = [obj3, obj4];
-let feed3 = [obj5];
+let feed2 = [obj3];
 
   return (
     <div>
     <h1 className = ".PageHeaderText"> MY ITEMS </h1>
     <VStack spacing = {10}>
->    <VStack spacing = {10}> 
+    <VStack spacing = {10}> 
         <HStack spacing={10}>
           {feed1.map((obj) => (
              <Link to="/MyItems">
@@ -69,16 +55,6 @@ let feed3 = [obj5];
               </Link>
           ))}
         </HStack>
-        <HStack spacing={10}>
-          {feed3.map((obj) => (
-             <Link to="/MyItems">
-             <button type="button"> 
-                <img alt="image" className= "TilePhoto" src={obj.itemImage} key={obj.itemImage}/>
-              </button>
-              </Link>
-          ))}
-        </HStack>
-
         <NavBar></NavBar>
      </VStack>
      <Link to="/UploadItem">
