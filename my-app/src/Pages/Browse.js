@@ -5,7 +5,6 @@ import { NavBar } from "../Components/NavBar";
 import { Button } from "../Components/Button";
 import { ViewItem } from "./ViewItem";
 import { Text } from "@chakra-ui/react";
-import userprof from "../Images/userimage.webp";
 import { useState, useEffect } from "react";
 import { databases } from "../services/appwriteConfig";
 import "../App";

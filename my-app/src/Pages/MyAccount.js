@@ -6,7 +6,7 @@ import { Stack} from "@chakra-ui/react";
 import { NavBar } from "../Components/NavBar";
 import { Button } from "../Components/Button";
 import { Text } from "@chakra-ui/react";
-import userprof from "../Images/userimage.webp"
+import userprof from "../Images/userimage.png"
 
 import "../App";
 
