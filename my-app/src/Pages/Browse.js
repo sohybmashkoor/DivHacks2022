@@ -11,25 +11,53 @@ import "../App";
 
 export const Browse = () => {
   const [postChosen, setPostChosen] = useState("");
-  let feed = [
-    "https://images.unsplash.com/photo-1611915387288-fd8d2f5f928b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80",
-    "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cute-cat-photos-1593441022.jpg?crop=0.669xw:1.00xh;0.166xw,0&resize=640:*",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT91bLZ_uuyT35AFwAb_dwQ9k9XgOAdy296g47XGCNF&s",
-    "https://cdn.pixabay.com/photo/2015/11/16/14/43/cat-1045782__340.jpg",
-    "https://www.rd.com/wp-content/uploads/2021/04/GettyImages-988013222-scaled-e1618857975729.jpg",
-  ];
-  console.log(feed.length);
-  let numRows = feed.length / 2;
-  if (feed.length % 2 == 1) {
-    numRows = numRows + 1;
-  }
+  
 
-  const passPostToViewItem = (image) => {
+  let obj1 = {
+    itemName: "iPhone 5",
+    itemDescription: "Doesn't turn on. Some exterior damage.",
+    itemUser: "",
+    itemImage: "https://i.ebayimg.com/images/g/6vcAAOSwqOJiWbmP/s-l500.jpg",
+  };
+  let obj2 = {
+    itemName: "2007 Dell Computer",
+    itemDescription: "Water damage",
+    itemUser: "",
+    itemImage:
+      "https://i.ebayimg.com/thumbs/images/g/DhoAAOSwPjBjLi65/s-l225.webp",
+  };
+  let obj3 = {
+    itemName: "RAM Memory Chips",
+    itemDescription: "About 100 chips, unsure if they work",
+    itemUser: "",
+    itemImage:
+      "https://i.ebayimg.com/thumbs/images/g/C5oAAOSwT9ZjHimG/s-l225.webp",
+  };
+  let obj4 = {
+    itemName: 'Sharp 13" TV',
+    itemDescription: "Works perfectly, just old.",
+    itemUser: "",
+    itemImage:
+      "https://i.ebayimg.com/thumbs/images/g/RrwAAOSwP0piqy2a/s-l225.webp",
+  };
+  let obj5 = {
+    itemName: "Car Stereo",
+    itemDescription: "No clue if it works. Trying to get rid of it.",
+    itemUser: "",
+    itemImage:
+      "https://i.ebayimg.com/thumbs/images/g/OV4AAOSwMexiMmb5/s-l225.webp",
+  };
+  let feed2 = [obj1, obj2, obj3, obj4, obj5];
+
+  const passPostToViewItem = (obj) => {
     console.log("passPostToViewItem is running");
-    setPostChosen(image);
-    console.log(image);
-    localStorage.setItem("imageUrl", image);
-    console.log(localStorage.getItem("imageUrl"));
+    setPostChosen(obj);
+
+    localStorage.setItem("itemUrl", obj.itemImage);
+    localStorage.setItem("itemName", obj.itemName);
+    localStorage.setItem("itemDescription", obj.itemDescription);
+    localStorage.setItem("itemUser", obj.itemUser);
+    
   };
 
   return (
@@ -39,11 +67,18 @@ export const Browse = () => {
 
       <VStack spacing={250}>
         <VStack spacing={10}>
-          <Text className="" fontSize="4xl">Search</Text>
-          {feed.map((url) => (
+          <Text className="UploadName" fontSize="4xl">
+            Search
+          </Text>
+          {feed2.map((obj) => (
             <Link to="/ViewItem">
-              <button type="button" onClick={(e) => passPostToViewItem(url)}>
-                <img alt="image" className="TilePhoto" src={url} key={url} />
+              <button type="button" onClick={(e) => passPostToViewItem(obj)}>
+                <img
+                  alt="image"
+                  className="TilePhoto"
+                  src={obj.itemImage}
+                  key={obj.itemImage}
+                />
               </button>
             </Link>
           ))}

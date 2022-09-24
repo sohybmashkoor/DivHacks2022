@@ -16,13 +16,16 @@ export const MyAccount = () => {
       <h1 className=".PageHeaderText">MY ACCOUNT</h1>
       {/* feed should generate here */}
 
-      <VStack spacing = {100}>
+      <VStack spacing = {20}>
           <VStack spacing={10}>
         <img alt="Profile image" class="profile image" src={userprof} className="ProfileImage"></img>           
           <Button text="edit profile"></Button>
         </VStack>
         <Link to="/ItemsRequested">
             <Button text="Items Requested"></Button>
+          </Link>
+          <Link to="/Resources">
+            <Button text="Resources"></Button>
           </Link>
         <NavBar></NavBar>
       </VStack>

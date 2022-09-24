@@ -12,33 +12,37 @@ const Launch = () => {
   //console.log(location.wentBack);
   //let arr = getAllItems2();
   //console.log(arr);
-//   const [feed, setFeed] = useState([]);
+  const [feed, setFeed] = useState([]);
 
-//   useEffect(() => {
-//     const getAllItems = () => {
-//       //let listOfItems;
-//       const promise = databases.listDocuments("site-data", "all-items");
+  useEffect(() => {
+    const getAllItems = () => {
+      //let listOfItems;
+      const promise = databases.listDocuments("site-data", "all-items");
 
-//       promise.then(
-//         function (response) {
-//           setFeed(response);
-//           console.log("below is list of feed: ");
-//           console.log(feed);
-//           //console.log(response); // Success
-//         },
-//         function (error) {
-//           console.log(error); // Failure
-//         }
-//       );
-//     };
-//     getAllItems();
-//   }, []);
+      promise.then(
+        function (response) {
+          setFeed(response);
+          console.log("below is list of feed: ");
+          console.log(feed);
+          //console.log(response); // Success
+        },
+        function (error) {
+          console.log(error); // Failure
+        }
+      );
+    };
+    if (feed.length == 0) {
+      getAllItems();
+    }
+  });
+
+  console.log(feed);
 
   return (
     <div>
       <VStack spacing={35}>
         <VStack>
-          <header className="Logo-Text"> RE-WASTE </header>
+          <header className="Logo-Text"> eCycle </header>
           <p className="Logo-subText"> Your Virtual Junkyard! </p>
         </VStack>
       </VStack>
