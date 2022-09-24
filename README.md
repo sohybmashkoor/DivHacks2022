@@ -1,2 +1,3 @@
-# DivHacks2022
-E-waste Project
+# DivHacks2022 - eCycle
+
+An app that helps minimize e-waste on an individual scale.
