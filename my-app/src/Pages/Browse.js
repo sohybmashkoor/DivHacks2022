@@ -1,17 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { VStack } from "@chakra-ui/react";
+import { VStack, HStack } from "@chakra-ui/react";
 import { NavBar } from "../Components/NavBar";
 import { Button } from "../Components/Button";
 import { ViewItem } from "./ViewItem";
 import { Text } from "@chakra-ui/react";
 import userprof from "../Images/userimage.webp";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { databases } from "../services/appwriteConfig";
 import "../App";
 
 export const Browse = () => {
   const [postChosen, setPostChosen] = useState("");
-  
 
   let obj1 = {
     itemName: "iPhone 5",
@@ -47,7 +47,38 @@ export const Browse = () => {
     itemImage:
       "https://i.ebayimg.com/thumbs/images/g/OV4AAOSwMexiMmb5/s-l225.webp",
   };
-  let feed2 = [obj1, obj2, obj3, obj4, obj5];
+
+  let feed1 = [obj1, obj2];
+  let feed2 = [obj3, obj4];
+  let feed3 = [obj5];
+
+  // const [feed2, setFeed] = useState([]);
+
+  // useEffect(() => {
+  //   if (feed2 <= 0) {
+  //     const getAllItems = () => {
+  //       //let listOfItems;
+  //       const promise = databases.listDocuments("site-data", "all-items");
+
+  //       return promise.then(
+  //         function (response) {
+  //           setFeed(response);
+  //           console.log("below is list of feed: ");
+  //           console.log(feed2);
+  //           //console.log(response); // Success
+  //         },
+  //         function (error) {
+  //           console.log(error); // Failure
+  //         }
+  //       );
+  //     };
+  //     if (feed2.length === 0) {
+  //       setFeed(getAllItems());
+  //     }
+  //   }
+  // }, [feed2]);
+
+  //console.log(feed2);
 
   const passPostToViewItem = (obj) => {
     console.log("passPostToViewItem is running");
@@ -57,31 +88,57 @@ export const Browse = () => {
     localStorage.setItem("itemName", obj.itemName);
     localStorage.setItem("itemDescription", obj.itemDescription);
     localStorage.setItem("itemUser", obj.itemUser);
-    
   };
 
   return (
     <div>
       <h1 className=".PageHeaderText">BROWSE ITEMS</h1>
-      {/* feed should generate here */}
 
       <VStack spacing={250}>
         <VStack spacing={10}>
           <Text className="UploadName" fontSize="4xl">
             Search
           </Text>
-          {feed2.map((obj) => (
-            <Link to="/ViewItem">
-              <button type="button" onClick={(e) => passPostToViewItem(obj)}>
-                <img
-                  alt="image"
-                  className="TilePhoto"
-                  src={obj.itemImage}
-                  key={obj.itemImage}
-                />
+          <HStack spacing={10}>
+          {feed1.map((obj) => (
+             <Link to="/ViewItem">
+             <button type="button" onClick={(e) => passPostToViewItem(obj)}>
+                <img alt="image" 
+                  className= "TilePhoto" 
+                  src={obj.itemImage} 
+                  key={obj.itemImage}/>
               </button>
-            </Link>
+              </Link>
           ))}
+         </HStack>
+         <HStack spacing={10}>
+            {feed2.map((obj) => (
+              <Link to="/ViewItem">
+                <button type="button" onClick={(e) => passPostToViewItem(obj)}>
+                  <img
+                    alt="image"
+                    className="TilePhoto"
+                    src={obj.itemImage}
+                    key={obj.itemImage}
+                  />
+                </button>
+              </Link>
+            ))}
+          </HStack>
+          <HStack spacing={10}>
+            {feed3.map((obj) => (
+              <Link to="/ViewItem">
+                <button type="button" onClick={(e) => passPostToViewItem(obj)}>
+                  <img
+                    alt="image"
+                    className="TilePhoto"
+                    src={obj.itemImage}
+                    key={obj.itemImage}
+                  />
+                </button>
+              </Link>
+            ))}
+          </HStack>
           ;<NavBar></NavBar>
         </VStack>
       </VStack>

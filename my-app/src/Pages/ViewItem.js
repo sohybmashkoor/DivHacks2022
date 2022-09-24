@@ -18,7 +18,10 @@ export const ViewItem = () => {
         <Text className="UploadName">
             {objectName}
           </Text>
-          <Text className="UploadDescription" fontSize="4xl">
+          <Text  fontSize="4xl" as="b">
+            About this item:
+          </Text>
+          <Text className="UploadDescription" fontSize="4xl" >
             {objectDesc}
           </Text>
         <Link to="/Browse">

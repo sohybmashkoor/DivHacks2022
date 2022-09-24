@@ -55,6 +55,27 @@
 
   color: #a2d9a3;
 }
+
+.Small-Text {
+  width: 325px;
+  font-family: "Garamond", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: -0.015em;
+
+  color: #000000;
+}
+
+.Medium-Text {
+  width: 325px;
+  font-family: "Garamond", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+}
+
 .Logo-subText {
   width: 350px;
   height: 68px;
@@ -122,13 +143,13 @@
 }
  
 .UploadItemPhoto{
-  width: 125px;
-  height: 125px;
+  width: 145px;
+  height: 145px;
 }
 
 .TilePhoto{
-  width: 175px;
-  height: 175px;
+  width: 130px;
+  height: 130px;
 }
 
 .UploadItemURL{
@@ -172,9 +193,14 @@
   cursor: text;
   overflow: hidden;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+
   font-size: large;
   font-family: "Shadows Into Light", Arial;
 }
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

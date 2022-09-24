@@ -16,12 +16,10 @@ export const UploadItem = () => {
     <div>
       <h1 className=".PageHeaderText"> UPLOAD ITEM </h1>
       <VStack spacing={70}>
-  
+
     
           <UploadContent> </UploadContent>
-        {/* add the description, make it editable */}
-        
-       
+      
       </VStack>
     </div>
   );

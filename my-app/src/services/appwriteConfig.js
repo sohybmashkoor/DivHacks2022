@@ -29,7 +29,25 @@ export const registerUser = () => {
 //   }
 // });
 
-export const addItem = () => {
+export const addItem = (item) => {
+  const promise = databases.createDocument(
+    "site-data",
+    "all-items",
+    ID.unique(),
+    item
+  );
+
+  promise.then(
+    function (response) {
+      console.log(response);
+    },
+    function (error) {
+      console.log(error);
+    }
+  );
+};
+
+export const addItemOld = () => {
   let hardCodedItem = {
     itemName: "TV",
     itemDescription: "very basic TV",

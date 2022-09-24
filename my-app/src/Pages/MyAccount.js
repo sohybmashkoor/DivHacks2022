@@ -16,7 +16,7 @@ export const MyAccount = () => {
       <h1 className=".PageHeaderText">MY ACCOUNT</h1>
       {/* feed should generate here */}
 
-      <VStack spacing = {20}>
+      <VStack spacing = {10}>
           <VStack spacing={10}>
         <img alt="Profile image" class="profile image" src={userprof} className="ProfileImage"></img>           
           <Button text="edit profile"></Button>

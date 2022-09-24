@@ -10,7 +10,6 @@ import { addItem } from "../services/appwriteConfig";
 export const UploadContent = (props) => {
   const [itemName, setitemName] = useState("");
   const [itemImage, setitemImage] = useState("");
-  const [itemImageURL, setitemURL] = useState("");
   const [itemDescription, setitemDescription] = useState("");
   const [itemUser, setitemUser] = useState(""); //this can be set to whatever the user that is logged in during our demo is.
 
@@ -18,17 +17,16 @@ export const UploadContent = (props) => {
     console.log("handleItemAndAddToDB has been called. ");
 
     let item = {
-      name: itemName,
-      image: itemImage,
-      url: itemImageURL,
-      description: itemDescription,
-      user: itemUser,
+      itemName: itemName,
+      itemImage: itemImage,
+      itemDescription: itemDescription,
+      itemUser: itemUser,
     };
 
-    console.log("image is " + itemImage);
+    // console.log("image is " + itemImage);
 
     try {
-      addItem();
+      addItem(item);
     } catch (error) {
       console.log(error);
     }
@@ -66,8 +64,7 @@ export const UploadContent = (props) => {
             className="UploadItemURL"
             onChange={(e) => setitemImage(e.target.value)}
             value={itemImage}
-            
-          />  
+          />
           <img className="UploadItemPhoto" id="target" src={itemImage} alt="" />
         </VStack>
 
