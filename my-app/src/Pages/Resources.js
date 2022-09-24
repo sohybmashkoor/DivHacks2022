@@ -8,7 +8,7 @@ import "../App";
 export const Resources = () => {
   return (
     <div>
-    <h1 className=".PageHeaderText"> Resources </h1>
+    <h1 className=".PageHeaderText"> RESOURCES </h1>
     <VStack spacing={10}>
       <Text className="Small-Text">
       Below we have listed some helpful online resources to learn more about electronic waste and its adverse effects on the enviroment.
