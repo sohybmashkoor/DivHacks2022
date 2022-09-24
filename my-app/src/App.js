@@ -7,7 +7,7 @@ import {MyAccount} from "./Pages/MyAccount";
 import {ItemsRequested} from "./Pages/ItemsRequested";
 import {UploadItem} from "./Pages/UploadItem";
 import {ViewItem} from "./Pages/ViewItem";
-import {EditMyItem} from "./Pages/EditMyItem";
+import {ViewMyItem} from "./Pages/ViewMyItem";
 import {Resources} from "./Pages/Resources";
 import { ChakraProvider } from "@chakra-ui/react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -27,6 +27,7 @@ function App() {
           <Route exact path="/UploadItem" element={<UploadItem />} />
           <Route exact path="/ViewItem" element={<ViewItem />}/>
           <Route exact path="/Resources" element={<Resources />}/>
+          <Route exact path="/ViewMyItem" element={<ViewMyItem />}/>
         </Routes>
       </Router>
     </div>
