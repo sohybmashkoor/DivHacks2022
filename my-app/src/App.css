@@ -30,7 +30,7 @@
 }
 
 .PageHeaderText {
-  font-family: "Baloo Thambi 2", cursive;
+  font-family: "Garamond", serif;
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
@@ -46,7 +46,7 @@
 .Logo-Text {
   width: 300px;
   height: 58px;
-  font-family: "Chilanka";
+  font-family: "Garamond", serif;
   font-style: normal;
   font-weight: 400;
   font-size: 50px;
@@ -69,16 +69,39 @@
 }
 
 .Button {
-  width: 167px;
+  width: 120px;
   height: 58px;
   border-radius: 40px;
-  background: #a2d9a3;
+  background:  #a2d9a3;
   font-family: "Roboto", sans-serif;
   border-radius: 40px;
   font-style: normal;
   font-weight: 900;
   font-size: 14px;
   line-height: 16px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.Button:hover {
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  background:  #91c392;
+}
+
+.NavButton {
+  width: 120px;
+  height: 40px;
+  /* border-radius: 40px; */
+  background: #adadad;
+  font-family: "Roboto", sans-serif;
+  /* border-radius: 1px; */
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  /* line-height: 16px; */
   align-items: center;
   text-align: center;
   letter-spacing: 0.04em;
@@ -96,10 +119,62 @@
   position: fixed;
   margin-bottom: 30px;
   bottom: 0;
-
 }
  
+.UploadItemPhoto{
+  width: 125px;
+  height: 125px;
+}
 
+.TilePhoto{
+  width: 150px;
+  height: 150px;
+}
+
+.UploadItemURL{
+  height: 30px;
+  width: 275px;
+  border-radius: 10px;
+  resize: none;
+  margin: 2px 0;
+  cursor: text;
+  overflow: hidden;
+  overflow-wrap: normal;
+  font-size: small;
+  position: relative;
+}
+
+.UploadDescription{
+  height: 100px;
+  width: 275px;
+  margin: 2px 0;
+  position: relative;
+  resize: none;
+  cursor: text;
+  overflow: hidden;
+  border-radius: 10px;
+  font-size: medium;
+  font-family: "Shadows Into Light", Arial;
+}
+
+
+
+.UploadName{
+  height: 30px;
+  width: 250px;
+  margin: 2px 0;
+  border: none;
+  resize: none;
+  text-align: center;
+  background-color: lightgray;
+  outline: none;
+  position: relative;
+  cursor: text;
+  overflow: hidden;
+  border-radius: 10px;
+  font-size: large;
+  font-family: "Shadows Into Light", Arial;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

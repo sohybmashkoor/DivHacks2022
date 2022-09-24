@@ -9,15 +9,16 @@ import "../App";
 export const MyItems = () => {
   return (
     <div>
-    <h1>My items</h1>
-    <VStack spacing = {300}>
-          <VStack spacing={10}>
-
+    <h1 className = ".PageHeaderText"> MY ITEMS </h1>
+    <VStack spacing = {300}> 
+        <VStack spacing={10}>
+            {/* Display items from database */}
+          <Link to="/UploadItem">
             <Button text="Add Item"></Button>
-          </VStack>
-          <NavBar></NavBar>
+          </Link>
+        </VStack>
+        <NavBar></NavBar>
      </VStack>
-    
     </div>
   );
 };

@@ -1,22 +1,22 @@
 import React from "react";
 import { Stack, HStack, VStack } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { Button } from "./Button";
+import { NavButton } from "./NavButton";
 import "../App.css";
 
 export const NavBar = () => {
   return (
     <div>
       <VStack spacing={10}>
-        <HStack spacing={10} className="NaviBar">
+        <HStack spacing={-2} className="NaviBar">
           <Link to="/Browse">
-            <Button text="Browse"></Button>
+            <NavButton text="Browse"></NavButton>
           </Link>
           <Link to="/MyItems">
-            <Button text="My Items"></Button>
+            <NavButton text="My Items"></NavButton>
           </Link>
           <Link to="/MyAccount">
-            <Button text="Account"></Button>
+            <NavButton text="Account"></NavButton>
           </Link>
         </HStack>
       </VStack>

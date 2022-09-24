@@ -1,15 +1,16 @@
 import React from "react";
 import "../App.css";
 
-export const Button = (props) => {
+export const Tile = (props) => {
   return (
     <div>
-        <button className = "Button" onClick={props.onClick} >
+        <button className = "Tile" onClick={props.onClick} >
          {props.text}
+         
 
         </button>
     </div>
   );
 };
 
-export default Button;
+export default Tile;
